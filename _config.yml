@@ -1,224 +1,35 @@
-# jekyll-theme-h2o-ac
-version: 1.1.12
+title: Minimalist theme
+logo: /assets/img/logo.png
+email: bogus at gmail dot com
+description: Minimalist is a theme powered by Jekyll. It is modified based on the Minimal theme.
+show_downloads: false
+google_analytics: UA-108144808-1
+color-scheme: auto
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
 
-# Site settings 配置站点
-title: 'Mr Li'
-description: '个人的一个技术博客站点，主要用于记录个人在学习过程中遇到的技术问题及解决方法、技术实验，以及一些比较有趣的事情。'
-keyword: 'zhonger，zhonger的博客，nodejs，kvm, 机器学习'
-url: 'https://h2o-ac.pages.dev' # your host
+# You can find fonts from https://iconify.design or https://fontawesome.com. Below is just an example illustrating how to use custom icons
+sidebar:
+  - name: Google Scholar
+    icon: <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align:-0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14a7 7 0 0 0 0-14z" fill="currentColor"/></svg>
+    link: https://scholar.google.com/citations?user=zR6afi8AAAAJ
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/BDHU
+  - name: Twitter
+    icon: <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align:-0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z" fill="currentColor"/></g></svg>
+    link: https://twitter.com/BodunHu
+  - name: Blog
+    icon: <i class="fa-solid fa-pen"></i>
+    link: https://www.bodunhu.com/blog/
+  - name: Project Repository
+    icon: <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align:-0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/></g></svg>
+    link: https://github.com/BDHU/minimalist
 
-# when build blog on server, if you don't need baseurl, you should leave this value blank.
-# 在服务器上建站时，如果你不需要子域名，请将这一格留空
-# if you're using GitHub Pages, set baseurl to your blog's .
-# 如果你在使用 GitHub Pages, 请将 baseurl 设置为你的网址的子域名
-# for example, if your site is "kaeyleo.github.io", then this url should leave blank.
-# 例如，当你的域名是 "kaeyleo.github.io"  时，这个 url 需要留空
-# but if your created a repo named "myblog", and the site is "kaeyleo.github.io/myblog", change baseurl to '/myblog'
-# 但是，如果你创建了一个叫 "myblog" 的网站，此时网址会变成 "kaeyleo.github.io/myblog" ，这时再将 baseurl 设置为 '/myblog'
-baseurl: ''
-
-# Github
-github:
-  enabled: true
-  owner: zhonger
-  repository: jekyll-theme-H2O-ac
-
-# PWA
-pwa:
-  color: '#81BBFF'
-  short_name: 'lisz'
-
-# International
-language: zh-cn
-
-# Navigation links
-nav:
-  home: '/'
-  blog: '/blog/index.html'
-  archives: '/archives.html'
-  tags: '/tags.html'
-  about:   
-    RSS: '/feed.xml'
-
-# Gray for the whole site 全站灰色
-gray: false
-
-# Formats
-# 时间格式（Time format）：0 -- 2022-04-29    1 -- 29 Apr 2022   2 -- 2022年4月29日
-formats:
-  time: 0   
-
-# Favicon
-favicon: "/favicon.ico"
-
-# Footer
-footer:
-  since: 2015
-
-# Author 配置博主信息
-author: 'zhonger'
-nickname: 'zhonger'
-bio: '全栈开发者，热爱前端、运维和架构设计'
-avatar: '/assets/img/profile.webp'
-
-# Search
-search: true
-
-# Night mode
-nightMode: false
-
-# Comments 评论功能
-comments:
-  disqus: false
-  disqus_url: 'https://h2o-ac.disqus.com/embed.js'
-  waline: false
-  waline_url: 'https://h2o-ac-waline.deta.dev/'
-
-# MathJax 公式支持 by Ray-Eldath
-mathjax: true
-
-# Share
-social-share: true
-social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
-
-# theme color 主题皮肤
-theme-color: 'default'  # pink or default
-
-# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
-postPatterns: 'circuitBoard'
-
-# SNS settings 配置社交网站
-# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
-sns:
-  # google-scholar: 'https://scholar.google.com/citations?user=AUupIooAAAAJ'
-  # researchgate: 'https://www.researchgate.net/profile/Shengzhou-Li'
-  # ORCID: 'https://orcid.org/0000-0001-6973-3825'
-  # github: 'https://github.com/zhonger'
-  # linkedin: 'https://www.linkedin.com/in/shengzhouli/'
-  # segmentfault: 'https://segmentfault.com/u/wuwozhonger'
-
-# Links 友情链接
-links:
-  # 'Mr Li': 'https://lisz.me'
-
-# Supports 赞助商
-supports:
-  upyun: 
-  webify: 
-
-# Beian 备案号
-beian: '沪ICP备xxxxxxxx号'
-
-# CC License
-cclicense: true
-
-# CNZZ Analytics
-# cnzz: 1234567891
-cnzz: 
-
-# Busuanzi Analytics
-busuanzi: true
-
-# Umami Analytics
-umami:
-  status: 
-  id: 
-  js: 
-
-# Google Analytics
-# google_analytics: UA-XXXXXXXXX-X
-google_analytics: 
-
-# Google Search
-google_search: 
-
-# ToS
-tos: /tos.html
-
-# Tags 设置标签
-recommend-tags: true # whether or not display recommend-tags on the sidebar
-recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
-
-# Build settings
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: 'page:num/'
-  title: ':title | :num of :max'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-
-exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md', '*.gemspec', '*.gem']
-
-# Markdown
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-
-# Prism settings
-# Support all offical and extended themes
-# Please visit https://prismjs.com and https://github.com/PrismJS/prism-themes/tree/master/themes to check the supported theme names
-prism:
-  theme: one-light
-  line_numbers: true
-
-# RSS
-RSS: true
-
-# Permalink
-# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
-permalink: /:categories/:title.html
-
-# Extlinks
-extlinks:
-  attributes: {rel: nofollow, target: _blank, class: extlinks}
-  # rel_exclude: ['host1.com', 'host2.net']
-  # class_exclude: ['host1.com', 'host2.net']
-
-# Mermaid
-mermaid: true
-
-# TOC
-toc: true
-# <div class="title">{% if title %} {{title}} {% else %} {{default_title}} {% endif %}</div>
-# premonition
-premonition:
-  default:
-    template: '<div class="premonition {{type}}">
-          <div class="header">
-            <svg class="icon {{type}}" aria-hidden="true">
-                <use xlink:href="#icon-{{type}}"></use>
-            </svg>
-            <div class="title"> {{title}} </div>
-          </div>
-          <div class="content">
-            {{content}}
-          </div>
-        </div>'
-  types:
-    citation:
-      template: '<div class="premonition {{type}}">
-          <div class="header">
-            <svg class="icon {{type}}" aria-hidden="true">
-                <use xlink:href="#icon-{{type}}"></use>
-            </svg>     
-          </div>
-          <div class="content">
-            {{content}}
-          </div>
-          {% if title %}<div class="ref"> ------ {{title}} </div>{% endif %}
-        </div>'
-      default_title: ''
-    note:
-      default_title: 'Note'
-    info:
-      default_title: 'Info'
-    warning:
-      default_title: 'Warning'
-    error:
-      default_title: 'Error'
-
-# Plugins
-plugins: [jekyll-paginate-v2, jekyll-feed, jekyll-sitemap, premonition, h2o-ac-jekyll-extlinks]
+# https://github.com/github/pages-gem/issues/399#issuecomment-301827749
+# When running locally, we run into the following error —
+# GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
+# adding this avoids it
+github: [metadata]
